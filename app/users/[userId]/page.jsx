@@ -6,9 +6,7 @@ const UserDetails = async ({ params }) => {
 
   return (
     <>
-      <h1>user id page : {params.userId}</h1>
-      <p>name: {details.name}</p>
-      <p>email: {details.email}</p>
+      <h1>user id : {params.userId}</h1>
 
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure>
@@ -19,8 +17,9 @@ const UserDetails = async ({ params }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title"> {details.name}</h2>
-          <p>{details.email}</p>
-          <div className="card-actions justify-end">
+          <p>Email: {details.email}</p>
+          <p>Phone: {details.phone}</p>
+          <div className="card-actions justify-center ">
             <button className="btn btn-primary">Add Friend</button>
           </div>
         </div>

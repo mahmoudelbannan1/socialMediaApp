@@ -12,19 +12,20 @@ const UserTable = async ({ sortBy }) => {
 
   return (
     <>
-      <div>sort by : {sortBy} </div>
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <Link href="users?order=name">name</Link>
-            </th>
-            <th>
-              <Link href="users?order=email">email</Link>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
+      <div className="container">
+        <div>sort by : {sortBy} </div>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <Link href="users?order=name">name</Link>
+              </th>
+              <th>
+                <Link href="users?order=email">email</Link>
+              </th>
+            </tr>
+          </thead>
+          {/* <tbody>
           {sortedUser.map((user) => (
             <tr key={user.id}>
               <td>
@@ -33,8 +34,29 @@ const UserTable = async ({ sortBy }) => {
               <td>{user.email}</td>
             </tr>
           ))}
-        </tbody>
-      </table>
+        </tbody> */}
+        </table>
+        <div className="cards flex flex-col align-center justify-center">
+          {sortedUser.map((user) => (
+            <div className="card w-96 bg-base-100 shadow-xl" key={user.id}>
+              <div className="card-body">
+                <figure>
+                  <img
+                    src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                    alt="Shoes"
+                  />
+                </figure>
+                <h2 className="card-title justify-center">
+                  {" "}
+                  <Link href={`users/${user.id}`}> {user.name}</Link>
+                </h2>
+
+                <div className="card-actions justify-center">{user.email}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 };

@@ -31,7 +31,7 @@
     text-wrap: balance;
   }
 }
-
+/* 
 nav {
   background-color: #eee;
 
@@ -47,7 +47,7 @@ nav ul li {
   display: inline-block;
   margin: 10px 20px;
   font-weight: bold;
-}
+} */
 
 table {
   border: 1px solid gray;

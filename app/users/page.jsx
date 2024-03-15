@@ -4,8 +4,7 @@ const Users = async ({ searchParams }) => {
   console.log(searchParams);
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <h1>order By : {searchParams.order}</h1>
+      <main className="flex min-h-screen flex-col items-center  p-24 m-500">
         <UserTable sortBy={searchParams.order}></UserTable>
       </main>
     </>
