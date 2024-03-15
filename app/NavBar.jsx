@@ -4,7 +4,7 @@ import React from "react";
 const NavBar = () => {
   return (
     <>
-      <nav className="flex bg-neutral space-x-6 border-b-2 h-14 mb-5 px-5 items-center">
+      <nav className="flex bg-neutral space-x-6 border-b-2 h-14 px-5 items-center">
         <ul className="flex space-x-6 text-zinc-200">
           <li>
             <Link href="/" className="text-zinc-100 hover:text-zinc-300">

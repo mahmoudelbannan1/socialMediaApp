@@ -25,18 +25,8 @@ const UserTable = async ({ sortBy }) => {
               </th>
             </tr>
           </thead>
-          {/* <tbody>
-          {sortedUser.map((user) => (
-            <tr key={user.id}>
-              <td>
-                <Link href={`users/${user.id}`}> {user.name}</Link>
-              </td>
-              <td>{user.email}</td>
-            </tr>
-          ))}
-        </tbody> */}
         </table>
-        <div className="cards flex flex-col align-center justify-center">
+        <div className="cards flex flex-wrap space-x-4 space-y-4 align-center justify-center">
           {sortedUser.map((user) => (
             <div className="card w-96 bg-base-100 shadow-xl" key={user.id}>
               <div className="card-body">
